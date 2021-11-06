@@ -1,0 +1,39 @@
+import random
+
+#bilgisayara 10-98 arası bir sayı ürettirelim.
+x=str(random.randint(10,98))
+
+#oyunun çalışabilmesi için tutulan sayının basamakları aynı olmamalı
+if x[0]==x[1]:
+    x=str(random.randint(10,98))
+
+#kullanıcıdan 10-98 arası ve basamakları aynı olmayan bir sayı istiyoruz
+a = input("lütfen 10-98 arası ve rakamları aynı olmayan bir sayı giriniz: ")
+
+if a[0] == a[1] or int(a)<10 or int(a)>98:
+    a = input("lütfen 10-98 arası ve rakamları aynı olmayan bir sayı giriniz: ")
+
+dogruyer_syc = 0
+yanlisyer_syc = 0
+
+if a[0] == x[0] and a[1] == x[1]:
+    dogruyer_syc += 2
+    print('tebrikler sayıyı doğru bildiniz')
+
+elif a[0] != x[0] and a[1] == x[1]:
+    dogruyer_syc += 1
+    yanlisyer_syc -= 1
+    print('tahmin ettiğiniz sayının bir rakamı doğru')
+
+elif a[0] == x[0] and a[1] != x[1]:
+    dogruyer_syc += 1
+    yanlisyer_syc -= 1
+    print('tahmin ettiğiniz sayının bir rakamı doğru')
+
+else:
+    yanlisyer_syc -= 2
+    print('tahmin ettiğiniz sayı yanlış')
+
+print('doğru yer sayacı = ',dogruyer_syc, 'yanlış yer sayacı = ', yanlisyer_syc)
+
+    
