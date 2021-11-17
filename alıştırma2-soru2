@@ -1,0 +1,10 @@
+
+def toplam_rek(n):
+    if n==1:
+        return 1
+
+    else:
+        return n+toplam_rek(n-1)
+
+toplm = int(input("n: "))
+print(toplam_rek(toplm))
