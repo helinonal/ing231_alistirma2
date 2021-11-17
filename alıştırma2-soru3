@@ -1,0 +1,9 @@
+def faktryl(n):
+    if n==1:
+        return 1
+
+    else:
+        return n*faktryl(n-1)
+
+carpm = int(input("n: "))
+print(faktryl(carpm))
