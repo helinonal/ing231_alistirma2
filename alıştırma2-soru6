@@ -1,7 +1,3 @@
-"""
-liste2 ve liste3 için kodum düzgün çalışmıyor :(
-"""
-
 def ikili_arama(liste, item):
     baslangic_no = 0
     bitis_no = len(liste) - 1
@@ -30,5 +26,5 @@ liste2 = [3,6,5]
 liste3 = [1,2,3,4]
 
 print(ikili_arama(liste1, 1))
-print(ikili_arama(liste1, 5))
-print(ikili_arama(liste1, 2))
+print(ikili_arama(liste2, 5))
+print(ikili_arama(liste3, 2))
