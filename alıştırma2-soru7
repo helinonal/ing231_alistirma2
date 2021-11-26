@@ -1,0 +1,34 @@
+# 17. ve 21. satırlarda eklediğim kodlar programımı rekürsif yapar mı?
+
+def ikili_arama(liste, item):
+    baslangic_no = 0
+    bitis_no = len(liste) - 1
+    liste.sort()
+
+    while baslangic_no <= bitis_no:
+        orta_nokta = baslangic_no + (bitis_no - baslangic_no) // 2
+        orta_deger = liste[orta_nokta]
+        
+        if orta_deger == item:
+            return orta_deger
+
+        elif item < orta_deger:
+            bitis_no: orta_deger - 1
+            return(liste,item)
+
+        else:
+            baslangic_no = orta_deger + 1
+            return(liste,item)
+
+    return None
+
+
+
+
+liste1 = [1]
+liste2 = [3,6,5] 
+liste3 = [1,2,3,4]
+
+print(ikili_arama(liste1, 1))
+print(ikili_arama(liste2, 5))
+print(ikili_arama(liste3, 2))
